@@ -1,4 +1,4 @@
-from ctypes import sizeof
+# from ctypes import sizeof
 from datetime import datetime
 import classes
 import csv
@@ -51,5 +51,4 @@ for em in employees:
 # print(monthly_balance)
 
 for i in range(len(monthly_balance)):
-    print(i,": ",monthly_balance[i])
-
+    print(i+1,": ",monthly_balance[i])

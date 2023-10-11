@@ -1,0 +1,10 @@
+A1:
+    Python 3.8.10
+    csv 1.0
+    datetime correspondence with Python 3.8.10
+A2:
+    Python 3.8.10
+A3:
+    Python 3.8.10
+A4:
+    Python 3.8.10
