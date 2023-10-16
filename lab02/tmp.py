@@ -1,11 +1,16 @@
-my_list = [1, 2, 3.5, "four", 5, 6, 7, 8, 9, 10, 11, 12, "thirteen"]
-my_list="(99)999-99-99"
+import re
 
-indices_to_check = [3, 5, 6, 10, 11, 12]
-indices_to_check = [1,2,4,5,6,8,9,11,12]
+vulgarities = ['kurw','korw','jeba','pierdol','chuj','huj']
 
-for index in indices_to_check:
-    if 0 <= index < len(my_list) and isinstance(my_list[index], (int, float)):
-        print(f"Element at index {index} is a number: {my_list[index]}")
-    else:
-        print(f"Element at index {index} is not a number or is out of bounds.")
+def find_vulgarities(sentence):
+    pattern = r"(?:^|\s)(?:{})(?:$|\s)".format('|'.join(map(re.escape, vulgarities)))
+    matches = re.findall(pattern, sentence, flags=re.IGNORECASE)
+    return matches
+
+sentence = "To jest przykład zdania z wulgaryzmami, takimi jak kurw, jeba, chuj i pierdol."
+found_vulgarities = find_vulgarities(sentence)
+
+if found_vulgarities:
+    print("Znalezione wulgaryzmy:", found_vulgarities)
+else:
+    print("Brak wulgaryzmów w zdaniu.")
