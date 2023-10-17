@@ -12,6 +12,7 @@ with open('RSPO.html','r',encoding='utf-8') as f_input:
         emails = re.findall(mail_pattern,f_content)
         # print(f_content)
         for email in emails:
+            print(email)
             f_output.write(email)
             f_output.write('\n')
             

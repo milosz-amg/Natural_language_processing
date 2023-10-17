@@ -1,14 +1,16 @@
 import re
 def check_name():
+    name_pattern=r'[A-Za-z]'
     name=input("Enter your name: ")
-    if name[0].isupper() and name[1:].islower():
+    if name[0].isupper() and name[1:].islower() and re.match(name_pattern,name):
         return 1,name
     else:
         return 0,"not_accepted"
 
 def check_surname():
+    surnamename_pattern=r'[A-Za-z]'
     surname=input("Enter your surname: ")
-    if surname[0].isupper() and surname[1:].islower():
+    if surname[0].isupper() and surname[1:].islower() and re.match(surnamename_pattern,surname):
         return 1,surname
     else:
         return 0,"not_accepted"
@@ -31,7 +33,8 @@ def check_code():
 
 def check_town():
     town = input("Enter your town name: ")
-    if town[0].isupper and town[1:].islower:
+    town_pattern=r'[A-Za-z]'
+    if town[0].isupper and town[1:].islower and re.match(town_pattern,town):
         return 1,town
     else:
         return 0, "not_accepted"
