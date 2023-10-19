@@ -1,0 +1,30 @@
+C01
+Napisać program, który wypisze podane liczby 
+posortowane malejąco i bez powtórzeń.
+
+C02
+W kolejnych wierszach dane są informacje na temat samochodów 
+(marka, model, prędkość maksymalna). Napisać program,
+który wypisze prędkość najszybszego samochodu.
+
+C03
+Wypisać sto dwudziestą trzecią linię wejścia.
+
+C04
+Wypisać linie od 10 do 20 włącznie (razem 11 linii).
+
+C05
+Napisać program, który policzy sumaryczną 
+ilość dwuznaków "cz" i "sz" na wejściu.
+
+C06
+Napisać program, który zamieni wszystkie polskie 
+znaki (małe i wielkie) na "X".
+
+C07
+Napisać program, który ponumeruje linie wejścia, 
+a następnie wypisze je w odwrotnej kolejności.
+
+C08
+Napisać program, który policzy liczbę słów w tekście 
+(ale nie policzy interpunkcji).
