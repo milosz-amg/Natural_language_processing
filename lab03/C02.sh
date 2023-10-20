@@ -1,17 +1,14 @@
 #!/bin/bash
 
-# Deklaracja tablicy do przechowywania danych
-declare -a car_data
+najszybsza_predkosc=0
+najszybszy_samochod=""
 
-# Pętla odczytująca dane ze standardowego wejścia
-while IFS= read -r line; do
-  car_data+=("$line")
+#linie mozna podac recznie lub z pliku auta komenda ./C02.sh < auta.in
+while IFS=, read -r marka model predkosc; do
+    if (( $(echo "$predkosc > $najszybsza_predkosc") )); then
+        najszybsza_predkosc=$predkosc
+        najszybszy_samochod="$marka $model"
+    fi
 done
 
-# Sortujemy dane według prędkości (3. kolumny, rozdzielone przecinkiem)
-sorted_data=($(printf "%s\n" "${car_data[@]}" | tr ',' ' ' | sort -k 3 -n -r | tr ' ' ',' | head -n 1))
-
-# Wyświetlamy posortowane wyniki
-for car in "${sorted_data[@]}"; do
-  echo "$car"
-done
+echo "$najszybszy_samochod $najszybsza_predkosc"
