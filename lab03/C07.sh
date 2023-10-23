@@ -9,4 +9,5 @@ while IFS= read -r line; do
 done
 
 tac $tmp_file > odwrotnie.out
+cat odwrotnie.out #wyswietlam na terminalu dla wygody
 rm $tmp_file

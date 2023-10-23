@@ -7,7 +7,7 @@ while IFS= read -r line; do
 done
 
 echo "cz,sz count:" 
-grep -o "cz\|sz" "$tmp_file" | wc -l
+grep -io "cz\|sz" "$tmp_file" | wc -l
 rm $tmp_file
 
-# ./C5.sh < linie.in
+# ./C05.sh < linie.in
